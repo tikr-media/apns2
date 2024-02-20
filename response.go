@@ -129,6 +129,11 @@ type Response struct {
 	// Notification, this will be a new unique UUID which has been created by APNs.
 	ApnsID string
 
+	// The APNs ApnsUniqueID value from the response "Apns-Unique-Id" header.
+	// This is set in Development mode and used to track status in the
+	// Apple Developer Push Notification Test Console.
+	ApnsUniqueID string
+
 	// If the value of StatusCode is 410, this is the last time at which APNs
 	// confirmed that the device token was no longer valid for the topic.
 	Timestamp Time
